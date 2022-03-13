@@ -1,0 +1,22 @@
+// The problem: Write an algorithm to implement insertion sort
+// The constraints:-Each time work only with the first i-1 element from of the array
+                // -Pick element arr[i] and insert it into sorted sequence in the array from 0 to i-1.
+// The input: The array to be sorted
+// The output: A console.log of the sorted array 
+// The solution: The solution consists of writing the algorithm that sorts the numbers in the  given array using insertion sort
+
+Insertion_sort ALGORITHM
+VAR
+    let nums = [3, 0, 2, 5, -1, 4, 1];;
+BEGIN
+    const insertion_Sort = (nums) => {
+    for (let i = 1; i < nums.length; i++) {
+    let current = nums[i];
+    for (var j = i - 1; nums[j] > current && j > -1; j--) {
+    nums[j + 1] = nums[j];
+    }
+    nums[j + 1] = current;
+  }
+  return nums;
+};
+END
